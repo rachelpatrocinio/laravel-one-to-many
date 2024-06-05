@@ -14,6 +14,15 @@
                     <label for="slug" class="form-label">Slug</label>
                     <input type="text" class="form-control" id="slug" name="slug" placeholder="Slug" value="{{old('slug')}}">
                 </div>
+                <div class="mb-5">
+                    <label for="type_id">Type</label>
+                    <select name="type_id" id="type_id" name="type_id">
+                        <option value="">-- Select Type --</option>
+                        @foreach($types as $type)
+                        <option @selected($type->id == old('type_id')) value="{{$type->id}}">{{$type->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
                 <div class="mb-3">
                     <label for="project_description" class="form-label">Project Description</label>
                     <textarea name="project_description" id="project_description" cols="30" rows="10" class="w-100" value="{{old('project_description')}}"></textarea>
