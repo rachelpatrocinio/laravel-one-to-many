@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="my-5">
-            <form action="" method="POST">
+            <form action="{{ route('admin.projects.update', $project)}}" method="POST">
                 @method('PUT')
                 @csrf
                 <div class="mb-5">

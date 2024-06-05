@@ -16,6 +16,7 @@
                 @endforeach
             @endif
         </div>
+        <a href="{{ route('admin.projects.edit', $project)}}" class="btn btn-warning w-25 mt-5">Edit</a>
     </div>
 </div>
 @endsection

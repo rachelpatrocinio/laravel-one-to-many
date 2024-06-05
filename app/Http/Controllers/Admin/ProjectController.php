@@ -7,20 +7,17 @@ use App\Models\Project;
 use App\Models\Type;
 use Illuminate\Http\Request;
 use App\Http\Requests\StorePostRequest;
+use App\Http\Requests\UpdateTypeRequest;
+
 class ProjectController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $projects = Project::all();
         return view('admin.projects.index', compact('projects'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create()
     {
         $types = Type::all();
@@ -54,9 +51,12 @@ class ProjectController extends Controller
     }
 
 
-    public function update(Request $request, Project $project)
+    public function update(UpdateTypeRequest $request, Project $project)
     {
-        //
+        $form_data = $request->all();
+        $project->update($form_data);  
+
+        return to_route('admin.projects.show', $project); 
     }
 
 
