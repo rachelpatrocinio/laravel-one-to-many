@@ -9,6 +9,10 @@
             <p>{{$project->github_url}}</p>
 
             <p><strong>Type:</strong> {{$project->type->name}}</p>
+            <h3>Related Projects</h3>
+            @foreach($project->type->projects as $project)
+            <p><a href="{{ route('admin.projects.show', $project)}}">{{$project->project_title}}</a></p>
+            @endforeach
         </div>
     </div>
 </div>
