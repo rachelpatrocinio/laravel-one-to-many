@@ -7,6 +7,8 @@
             <h1>{{$project->slug}}</h1>
             <p>{{$project->project_description}}</p>
             <p>{{$project->github_url}}</p>
+
+            <p><strong>Type:</strong> {{$project->type->name}}</p>
         </div>
     </div>
 </div>
