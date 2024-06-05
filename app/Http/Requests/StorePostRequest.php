@@ -24,7 +24,8 @@ class StorePostRequest extends FormRequest
         return [
             'project_title'=>'required|max:255',
             'project_description'=>'required|max:255',
-            'github_url'=>'required'
+            'github_url'=>'required',
+            'type_id'=>'required'
         ];
     }
 }
