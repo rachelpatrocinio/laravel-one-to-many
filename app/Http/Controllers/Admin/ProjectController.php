@@ -7,8 +7,6 @@ use App\Models\Project;
 use App\Models\Type;
 use Illuminate\Http\Request;
 use App\Http\Requests\StorePostRequest;
-
-
 class ProjectController extends Controller
 {
     /**
@@ -29,9 +27,6 @@ class ProjectController extends Controller
         return view('admin.projects.create', compact('types'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(StorePostRequest $request)
     {
         // $request->validate([
@@ -45,33 +40,26 @@ class ProjectController extends Controller
         return to_route('admin.projects.show', $new_project);
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(Project $project)
     {
         return view('admin.projects.show', compact('project'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+
     public function edit(Project $project)
     {
-        //
+        $types = Type::all();
+        return view('admin.projects.edit', compact('project', 'types'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, Project $project)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(Project $project)
     {
         //

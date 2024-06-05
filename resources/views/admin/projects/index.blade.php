@@ -11,6 +11,7 @@
                 <th scope="col">Project Description</th>
                 <th scope="col">Github Url</th>
                 <th scope="col">Details</th>
+                <th scope="col">Edit</th>
               </tr>
             </thead>
             <tbody>
@@ -21,11 +22,11 @@
                 <td>{{$project->project_description}}</td>
                 <td>{{$project->github_url}}</td>
                 <td><a href="{{ route('admin.projects.show', $project)}}">Details</a></td>
+                <td><a href="{{ route('admin.projects.edit', $project)}}">Edit</a></td>
               </tr>
             @endforeach
             </tbody>
           </table>
-        
     </div>
 </div>
 @endsection
