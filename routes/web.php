@@ -2,8 +2,7 @@
 
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\TypeController;
-use App\Models\Type;
+use App\Http\Controllers\Admin\TypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
