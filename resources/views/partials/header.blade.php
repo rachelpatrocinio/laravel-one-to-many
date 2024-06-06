@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-md shadow-sm d-flex flex-wrap">
         <div class="logo d-flex justify-content-center w-100">
-            <a class="navbar-brand " href="{{ url('/') }}">
+            <a class="navbar-brand mt-4" href="{{ url('/') }}">
                 <img src="{{ Vite::asset('resources/img/logo.png')}}" alt="">
             </a>
         </div>
@@ -12,7 +12,6 @@
         </button>
 
         <div class=" container collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="{{url('/') }}">{{ __('About Me') }}</a>
@@ -25,9 +24,7 @@
                 </li>
             </ul>
 
-            <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
-                <!-- Authentication Links -->
                 @guest
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

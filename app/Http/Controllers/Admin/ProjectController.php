@@ -41,7 +41,7 @@ class ProjectController extends Controller
         $n = 0;
 
         do {
-            $find = Project::where('slug', $slug)->first(); // null | Post
+            $find = Project::where('slug', $slug)->first();
 
             if ($find !== null) {
                 $n++;
@@ -78,7 +78,7 @@ class ProjectController extends Controller
         $n = 0;
 
         do {
-            $find = Project::where('slug', $slug)->first(); // null | Post
+            $find = Project::where('slug', $slug)->first();
 
             if ($find !== null) {
                 $n++;
