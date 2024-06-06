@@ -13,12 +13,6 @@
                     <input type="text" class="form-control" id="project_title" name="project_title" placeholder="Project Title" value="{{old('project_title')}}">
                 </div>
                 <div class="mb-5">
-                    <label for="slug" class="form-label">
-                        <img src="{{Vite::asset('resources/img/slug.png')}}" alt="Slug">
-                    </label>
-                    <input type="text" class="form-control" id="slug" name="slug" placeholder="Slug" value="{{old('slug')}}">
-                </div>
-                <div class="mb-5">
                     <label for="type_id">
                         <img src="{{ Vite::asset('resources/img/type.png')}}" alt="Type">
                     </label>
