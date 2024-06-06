@@ -5,7 +5,9 @@
 <section class="my-5">
     <div class="container">
         <div class="row">
-            <h2>Type Index</h2>
+            <div class="logo-title">
+                <img src="{{Vite::asset('resources/img/project-types.png')}}" alt="Projects Types">
+            </div>
         </div>
     </div>
 </section>
