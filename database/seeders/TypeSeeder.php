@@ -6,6 +6,8 @@ use App\Models\Type;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
+use Illuminate\Support\Facades\DB;
+
 
 class TypeSeeder extends Seeder
 {
@@ -14,7 +16,9 @@ class TypeSeeder extends Seeder
      */
     public function run(): void
     {
-        $types = ['type1', 'type2', 'type3'];
+
+        DB::table('types')->truncate();
+        $types = ['Type1', 'Type2', 'Type3', 'Type4'];
         foreach($types as $type){
             $new_type = new Type();
             $new_type->name = $type;
