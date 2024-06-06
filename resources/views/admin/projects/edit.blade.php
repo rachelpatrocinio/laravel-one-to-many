@@ -24,7 +24,7 @@
                         <select id="type_id" name="type_id" class="form-select">
                             <option value=""> ~ Select Type ~ </option>
                             @foreach($types as $type)
-                            <option @selected($type->id == old('type_id')) value="{{$type->id}}">{{$type->name}}</option>
+                            <option @selected($type->id == old('type_id', $project->type_id)) value="{{$type->id}}">{{$type->name}}</option>
                             @endforeach
                           </select>
                     </div>

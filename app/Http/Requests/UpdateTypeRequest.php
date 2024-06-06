@@ -24,7 +24,6 @@ class UpdateTypeRequest extends FormRequest
     {
         return [
             'project_title'=>'required|max:255',
-            'slug' => ['required', 'max:255', Rule::unique('projects')->ignore($this->project)],
             'project_description'=>'required|max:255',
             'github_url'=>'required',
             'type_id'=>'required'

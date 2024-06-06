@@ -74,6 +74,20 @@ class ProjectController extends Controller
     public function update(UpdateTypeRequest $request, Project $project)
     {
         $form_data = $request->all();
+        $base_slug = Str::slug($form_data['project_title']);
+        $slug = $base_slug;
+        $n = 0;
+
+        do {
+            // SELECT * FROM `posts` WHERE `slug` = ?
+            $find = Project::where('slug', $slug)->first(); // null | Post
+
+            if ($find !== null) {
+                $n++;
+                $slug = $base_slug . '-' . $n;
+            }
+        } while ($find !== null);
+        $form_data['slug'] = $slug;
         $project->update($form_data);  
 
         return to_route('admin.projects.show', $project); 
