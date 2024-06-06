@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Project;
 use App\Models\Type;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdateTypeRequest;
 
@@ -31,8 +32,27 @@ class ProjectController extends Controller
         //     'project_description'=>'required|max:255',
         //     'github_url'=>'required'
         // ]);
+      
 
         $form_data= $request->all();
+
+        $base_slug = Str::slug($form_data['project_title']);
+        $slug = $base_slug;
+        $n = 0;
+
+        do {
+            // SELECT * FROM `posts` WHERE `slug` = ?
+            $find = Project::where('slug', $slug)->first(); // null | Post
+
+            if ($find !== null) {
+                $n++;
+                $slug = $base_slug . '-' . $n;
+            }
+        } while ($find !== null);
+
+        $form_data['slug'] = $slug;
+
+
         $new_project = Project::create($form_data);
         return to_route('admin.projects.show', $new_project);
     }
