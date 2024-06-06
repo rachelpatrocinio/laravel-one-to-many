@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="logo-title">
-                <img src="{{ Vite::asset('resources/img/home.png')}}" alt="HOME">
+                <img src="{{ Vite::asset('resources/img/about-me.png')}}" alt="">
             </div>
         </div>
     </div>

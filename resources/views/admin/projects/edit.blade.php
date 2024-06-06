@@ -43,7 +43,9 @@
                     </label>
                     <input type="text" class="form-control" id="github_url" name="github_url" placeholder="Https://.." value="{{old('github_url', $project->github_url)}}">
                 </div>
-                <button class="btn bg-brown">SAVE</button>
+                <div class="text-end">
+                    <button class="bg-brown">SAVE</button>
+                </div>
             </form>
         </div>
         @if($errors->any())

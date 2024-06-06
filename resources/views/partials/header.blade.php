@@ -14,7 +14,10 @@
         <div class=" container collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('/') }}">{{ __('About Me') }}</a>
+                    <a class="nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="{{url('/aboutme') }}">{{ __('About Me') }}</a>
                 </li>
                 <li>
                     <a class="nav-link" href="{{route('admin.projects.index') }}">{{ __('Projects') }}</a>

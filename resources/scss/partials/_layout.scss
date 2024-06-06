@@ -32,4 +32,14 @@ button.bg-lightbrown{
 a{
     color:#694E3C;
     text-decoration: none;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.related a{
+    &:hover{
+        text-decoration: underline;
+    }
 }
