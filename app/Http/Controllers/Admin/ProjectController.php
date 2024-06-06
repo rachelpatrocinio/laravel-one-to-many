@@ -41,7 +41,6 @@ class ProjectController extends Controller
         $n = 0;
 
         do {
-            // SELECT * FROM `posts` WHERE `slug` = ?
             $find = Project::where('slug', $slug)->first(); // null | Post
 
             if ($find !== null) {
@@ -79,7 +78,6 @@ class ProjectController extends Controller
         $n = 0;
 
         do {
-            // SELECT * FROM `posts` WHERE `slug` = ?
             $find = Project::where('slug', $slug)->first(); // null | Post
 
             if ($find !== null) {
