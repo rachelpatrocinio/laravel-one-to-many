@@ -2,14 +2,14 @@
 
 @section('content')
 
-<section class="my-5">
-    <div class="container">
-        <div class="row">
-            <div class="logo-title">
-                <img src="{{Vite::asset('resources/img/project-types.png')}}" alt="Projects Types">
-            </div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="logo-title">
+            <img src="{{Vite::asset('resources/img/project-types.png')}}" alt="Projects Types">
         </div>
     </div>
-</section>
+</div>
+
 
 @endsection

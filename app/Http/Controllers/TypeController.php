@@ -31,12 +31,10 @@ class TypeController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(Type $type)
     {
-        //
+        return view('admin.types.show', compact('type'));
     }
 
     /**
