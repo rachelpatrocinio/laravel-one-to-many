@@ -26,7 +26,7 @@ class UpdateTypeRequest extends FormRequest
             'project_title'=>'required|max:255',
             'project_description'=>'required|max:255',
             'github_url'=>'required',
-            'type_id'=>'required'
+            'type_id'=>'required|exists:types,id'
         ];
     }
 }
