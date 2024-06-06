@@ -16,20 +16,19 @@ class TypeController extends Controller
         return view('admin.types.index', compact('types'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create()
     {
         return view('admin.types.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+
     public function store(StoreTypeRequest $request)
     {
-        //
+        $form_data = $request->all();
+        $new_type = Type::create($form_data);
+
+        return to_route('admin.types.index', $new_type);
     }
 
 

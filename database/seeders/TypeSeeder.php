@@ -14,7 +14,7 @@ class TypeSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run(Faker $faker): void
     {
 
         DB::table('types')->truncate();
@@ -22,6 +22,7 @@ class TypeSeeder extends Seeder
         foreach($types as $type){
             $new_type = new Type();
             $new_type->name = $type;
+            $new_type->description = $faker->text();
             $new_type->save();
         }
     }

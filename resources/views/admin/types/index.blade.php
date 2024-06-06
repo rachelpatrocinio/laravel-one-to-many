@@ -16,7 +16,7 @@
               @foreach($types as $type)
               <li>
                 <h4>{{ $type->name}}</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil beatae, cupiditate enim accusamus non expedita at natus minus sed esse obcaecati ipsa, totam nobis, nemo quasi dolor atque odit quis.</p>
+                <p>{{ $type->description}}</p>
               </li>
               @endforeach
             </ul>
