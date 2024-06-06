@@ -12,6 +12,7 @@
                 <th scope="col">Github Url</th>
                 <th scope="col">Details</th>
                 <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
               </tr>
             </thead>
             <tbody>
@@ -23,6 +24,14 @@
                 <td>{{$project->github_url}}</td>
                 <td><a href="{{ route('admin.projects.show', $project)}}">Details</a></td>
                 <td><a href="{{ route('admin.projects.edit', $project)}}">Edit</a></td>
+                <td>
+                  <form action="{{ route('admin.projects.destroy', $project)}}" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button class="btn btn-danger">Delete</button>
+                  </form>
+                </td>
+
               </tr>
             @endforeach
             </tbody>
